@@ -1,16 +1,16 @@
-# SMTP Relay Docker Image
+# MySQL Client Tools Docker Image
 
 [![](https://images.microbadger.com/badges/image/wearegenki/mysql-client.svg)](https://microbadger.com/images/wearegenki/mysql-client "Get your own image badge on microbadger.com") [![GitHub Tag](https://img.shields.io/github/tag/wearegenki/docker-mysql-client.svg)](https://registry.hub.docker.com/u/wearegenki/mysql-client/)
 
-Minimal MySQL compatible client docker image using MariaDB client libraries running on an Alpine Linux base. Useful for creating database backup dumps or as a throw away but full-featured MySQL client.
+Minimal MySQL compatible client tools docker image using MariaDB client libraries running on an Alpine Linux base. Useful for creating database dump backups or as a throw away but full-featured MySQL client.
 
 ## Usage
 
 From a terminal you can run something like:
 
 ```
-docker run -ti --name mysql-client wearegenki/mysql-client:latest \
-  mysql -h 123.123.123.123 -u root -p
+$ docker run -ti --name mysql-client wearegenki/mysql-client:latest \
+    mysql -h 123.123.123.123 -u root -p
 ```
 
 ### Available tools
