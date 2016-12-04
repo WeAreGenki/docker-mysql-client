@@ -1,4 +1,4 @@
-# MySQL client libs image for production backups
+# MySQL client libs image for general purpose use
 
 # FIXME: When the mariadb-client package enters the stable release, update this!
 FROM alpine:edge
