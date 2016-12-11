@@ -1,4 +1,4 @@
-# MySQL client libs image for general purpose use
+# MySQL client image for general purpose use
 
 # FIXME: When the mariadb-client package enters the stable release, update this!
 FROM alpine:edge
@@ -11,8 +11,7 @@ RUN addgroup -g 311 -S dba \
 	\
 	&& echo 'echo -e "\
 	\e[1mINSTRUCTIONS:\e[0m Run MySQL client tools as normal. Tools are in: /usr/bin\n\
-	\n\e[93mExample:\e[0m\n\
-	\n		mysql -h examplehost.com -u root -p\n\
+	\n\e[93mExample:\e[0m\n	mysql -h examplehost.com -u root -p\n\
 	"' > /var/lib/mysql/instructions.sh \
 	\
 	# Forward logs to docker log collector
@@ -20,8 +19,8 @@ RUN addgroup -g 311 -S dba \
 	&& chown -R dba /var/lib/mysql /var/log/mariadb \
 	&& chmod +x /var/lib/mysql/instructions.sh \
 	\
-	# Unset SUID on all executables
-	&& for i in $(find / -perm +6000 -type f); do chmod a-s $i; done
+	# Unset SUID on all files
+	&& for i in $(find / -perm /6000 -type f); do chmod a-s $i; done
 
 WORKDIR /var/lib/mysql
 USER dba
