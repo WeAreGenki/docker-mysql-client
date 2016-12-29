@@ -1,8 +1,7 @@
 # MySQL client image for general purpose use
 
-# FIXME: When the mariadb-client package enters the stable release, update this!
-FROM alpine:edge
-MAINTAINER Max Milton <max@wearegenki.com>
+FROM alpine:3.5
+LABEL MAINTAINER="Max Milton <max@wearegenki.com>"
 
 RUN addgroup -g 311 -S dba \
 	&& adduser -D -u 311 -S -h /var/lib/mysql -s /sbin/nologin -G dba dba \
