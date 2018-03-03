@@ -1,6 +1,6 @@
 # MySQL client image for general purpose use
 
-FROM alpine:3.5
+FROM alpine:3.5@sha256:9148d069e50eee519ec45e5683e56a1c217b61a52ed90eb77bdce674cc212f1e
 LABEL MAINTAINER="Max Milton <max@wearegenki.com>"
 
 RUN addgroup -g 311 -S dba \
